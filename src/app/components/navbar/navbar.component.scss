@@ -1,0 +1,36 @@
+.logo {
+  width: 3rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.search-form-field {
+  margin: 1.5rem 0 0 1rem;
+  flex: 1 1 auto;
+}
+
+.shoping-cart {
+  display: none;
+  border-radius: 0.5rem;
+}
+
+.show-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  background-color: #464646;
+  box-shadow: #69f0ae 0px 5px 8px;
+  right: 0;
+  top: 50px;
+  min-width: 45%
+}
+
+app-shoping-cart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
