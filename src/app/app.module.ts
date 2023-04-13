@@ -13,13 +13,19 @@ import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { RegisterComponent } from './components/register/register.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegisterPageComponent,
+    LoginPageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
