@@ -32,17 +32,17 @@
       <span>Purchases</span>
     </button>
 
-    <button mat-button color="accent" routerLink="/login" >
+    <button mat-button color="accent" routerLink="/login" *ngIf="!isSession" >
       <mat-icon>login</mat-icon>
       <span>Login</span>
     </button>
 
-    <button mat-button routerLink="/register">
+    <button mat-button routerLink="/register" *ngIf="!isSession">
       <mat-icon>account_circle</mat-icon>
       <span>Sing up</span>
     </button>
 
-    <button mat-button color="warn" (click)="onClick()">
+    <button mat-button color="warn" (click)="onClick()" *ngIf="isSession">
       <mat-icon>logout</mat-icon>
       <span>Logout</span>
     </button>
