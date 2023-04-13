@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
         'We send you a verify email',
         'Verify email'
       );
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     });
   }
 

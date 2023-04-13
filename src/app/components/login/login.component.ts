@@ -40,7 +40,7 @@ export class LoginComponent {
       if(user.user?.emailVerified) {
         this.router.navigate(['/home']);
       } else {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/verify_email']);
       }
     }).catch((error) => {
       this.toastr.error(this.firebaseError.codeError(error.code), 'Error');

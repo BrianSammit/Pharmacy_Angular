@@ -18,7 +18,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { LoginComponent } from './components/login/login.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EmailVerificationComponent } from './components/email-verification/email-verification.component'
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     RegisterComponent,
     RegisterPageComponent,
     LoginPageComponent,
-    LoginComponent
+    LoginComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,
