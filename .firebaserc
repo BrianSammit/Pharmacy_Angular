@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pharmacy-angular": {
+      "hosting": {
+        "pharmacy-angular": [
+          "pharmacy-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pharmacy-angular"
+  }
+}
