@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent} from './pages/home-page/home-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
-import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { EmailVerificationPageComponent } from './pages/email-verification-page/email-verification-page.component';
 
 
 const routes: Routes = [
@@ -12,7 +11,7 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
-  { path: 'verify_email', component: EmailVerificationComponent },
+  { path: 'verify_email', component: EmailVerificationPageComponent },
 ];
 
 @NgModule({

@@ -26,20 +26,9 @@
       <mat-icon>shopping_cart</mat-icon>
     </button>
 
-
     <button mat-button color="accent">
       <mat-icon>description</mat-icon>
       <span>Purchases</span>
-    </button>
-
-    <button mat-button color="accent" routerLink="/login" *ngIf="!isSession" >
-      <mat-icon>login</mat-icon>
-      <span>Login</span>
-    </button>
-
-    <button mat-button routerLink="/register" *ngIf="!isSession">
-      <mat-icon>account_circle</mat-icon>
-      <span>Sing up</span>
     </button>
 
     <button mat-button color="warn" (click)="onClick()" *ngIf="isSession">

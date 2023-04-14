@@ -16,7 +16,6 @@ export class RegisterComponent implements OnInit {
   formReg: FormGroup;
 
   constructor(
-    private userService: UserService,
     private router: Router,
     private fb: FormBuilder,
     private afAuth: AngularFireAuth,

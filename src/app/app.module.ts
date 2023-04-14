@@ -19,7 +19,9 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { EmailVerificationComponent } from './components/email-verification/email-verification.component'
+import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
+import { EmailVerificationPageComponent } from './pages/email-verification-page/email-verification-page.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { EmailVerificationComponent } from './components/email-verification/emai
     RegisterPageComponent,
     LoginPageComponent,
     LoginComponent,
-    EmailVerificationComponent
+    EmailVerificationComponent,
+    EmailVerificationPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
