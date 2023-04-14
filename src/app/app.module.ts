@@ -25,7 +25,9 @@ import { EmailVerificationComponent } from './components/email-verification/emai
 import { EmailVerificationPageComponent } from './pages/email-verification-page/email-verification-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
-import { ProductListComponent } from './components/product-list/product-list.component'
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component'
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
     EmailVerificationPageComponent,
     FooterComponent,
     ProductCardComponent,
-    ProductListComponent
+    ProductListComponent,
+    CartComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,

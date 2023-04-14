@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
-import { ProductService } from 'src/app/services/product.service';
+import { CartService } from 'src/app/services/cart.service';
+import { SharedVariablesService } from 'src/app/services/shared-variables.service';
 
 @Component({
   selector: 'app-product-card',
@@ -10,10 +10,19 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductCardComponent {
 
+  isAuth: boolean;
+  cartId: string | undefined = this.variablesService.user?.cart?.id;
+
  constructor(
-   private router: Router,
-   private service: ProductService,
- ) { }
+   private service: CartService,
+   private variablesService: SharedVariablesService,
+ ) {
+   this.isAuth = this.variablesService.isAuth;
+   variablesService.isAuthChanged.subscribe((newValue: boolean) => {
+     this.isAuth = newValue;
+   });
+ }
+
 
    @Input() product: Product = {
     id: '',
@@ -22,10 +31,18 @@ export class ProductCardComponent {
     price: 0,
     img: '',
     category: '',
-  }
+   }
 
- // addToCart(product: Product) {
-   // return this.shopingCart.addToCart(product);
- // }
+   addProductToCart(product: Product) {
+     return this.service.addProductToCart(this.cartId, this.product.id)
+     .subscribe((r) => {
+       alert("Product was added to cart successfully");
+     },
+     (error) => {
+       console.log(error)
+       alert("An error occurred while adding the item to the cart: "+ error.error)
+     })
+   }
+
 
 }
