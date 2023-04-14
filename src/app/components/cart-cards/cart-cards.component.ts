@@ -5,12 +5,11 @@ import { SharedVariablesService } from 'src/app/services/shared-variables.servic
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-product-card',
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.scss']
+  selector: 'app-cart-cards',
+  templateUrl: './cart-cards.component.html',
+  styleUrls: ['./cart-cards.component.scss']
 })
-export class ProductCardComponent {
-
+export class CartCardsComponent {
   isAuth: boolean;
   cartId: string | undefined = this.variablesService.user?.cart?.id;
 
@@ -35,8 +34,8 @@ export class ProductCardComponent {
     category: '',
    }
 
-   addProductToCart(product: Product) {
-     return this.service.addProductToCart(this.cartId, this.product.id)
+   removeProductFromCart(product: Product) {
+     return this.service.removeProductFromCart(this.cartId, this.product.id)
      .subscribe((r) => {
       this.toastr.success(
         'Product was remove from cart successfully'
@@ -47,6 +46,5 @@ export class ProductCardComponent {
        alert("An error occurred while adding the item to the cart: "+ error.error)
      })
    }
-
 
 }

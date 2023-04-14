@@ -27,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CartComponent } from './components/cart/cart.component';
-import { CartPageComponent } from './pages/cart-page/cart-page.component'
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { CartCardsComponent } from './components/cart-cards/cart-cards.component'
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component'
     ProductCardComponent,
     ProductListComponent,
     CartComponent,
-    CartPageComponent
+    CartPageComponent,
+    CartCardsComponent
   ],
   imports: [
     BrowserModule,

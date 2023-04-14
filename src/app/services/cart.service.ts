@@ -23,7 +23,7 @@ export class CartService {
     return this.http.post(`${this.api}/db9784c6-4/addProduct/${productId}`, null)
   }
 
-  removeItemFromList(cartId: string| undefined, productId: string| undefined): Observable<any>{
+  removeProductFromCart(cartId: string| undefined, productId: string| undefined): Observable<any>{
     return this.http.post(`${this.api}/db9784c6-4/removeProduct/${productId}`, null)
   }
 

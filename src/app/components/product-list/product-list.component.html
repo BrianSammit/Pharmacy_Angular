@@ -1,9 +1,4 @@
 <div class="search-product-page">
-    <mat-form-field  style="width: 40%;">
-        <input matInput  placeholder="Search" [(ngModel)]="searchingBy"/>
-    </mat-form-field>
-
-
     <div class="results-container">
         <app-product-card *ngFor="let i_product of s_founded | paginate : { itemsPerPage: 9,
             currentPage: page}" [product]="i_product"></app-product-card>

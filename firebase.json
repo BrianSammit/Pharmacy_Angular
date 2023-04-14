@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dir/pharmacy-angular",
+    "public": "dist/pharmacy-angular",
     "ignore": [
       "firebase.json",
       "**/.*",
