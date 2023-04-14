@@ -2,11 +2,12 @@
     background-color: #000000;
 }
 
-.conditions{
-  width: 30rem;
-  text-align: center;
+._nav {
+    &__link {
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
-.icon{
-  width: 5rem;
-}
