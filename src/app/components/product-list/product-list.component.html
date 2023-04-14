@@ -1,0 +1,31 @@
+<div class="search-product-page">
+    <mat-select [(value)]="selected" style="width: 30%;">
+        <mat-option value="n_ident">ID Number</mat-option>
+        <mat-option value="name">Name</mat-option>
+    </mat-select>
+
+    <mat-form-field  style="width: 40%;">
+        <input matInput  placeholder="Search" [(ngModel)]="searchingBy"/>
+    </mat-form-field>
+
+
+    <div class="results-container">
+        <app-product-card *ngFor="let i_product of s_founded | paginate : { itemsPerPage: 3,
+            currentPage: page}" [product]="i_product"></app-product-card>
+    </div>
+
+    <ng-container *ngIf="founded > 0; else noStudentsFound">
+        <div>
+            <h4 >Founded: {{ founded }}</h4>
+        </div>
+    </ng-container>
+
+    <ng-template #noStudentsFound>
+        <div>
+            <h4 >No student(s) were found</h4>
+        </div>
+    </ng-template>
+
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
+
