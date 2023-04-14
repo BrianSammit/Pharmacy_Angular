@@ -3,10 +3,9 @@
     <h1><b>Shopping cart</b></h1>
   </div>
 
-  <div *ngIf="total! > 0" [ngStyle]="{display: 'flex', flexDirection: 'column', margin: '10px 10px 10px 13px'}"
-       class="cartContainer">
-    <app-product-card class="cartCard" *ngFor="let product of products! | paginate:{itemsPerPage: 2, currentPage: p }"
-                   [product]="product"></app-product-card>
+  <div class="results-container">
+    <app-product-card *ngFor="let i_product of s_founded | paginate : { itemsPerPage: 9,
+                              currentPage: page}" [product]="i_product"></app-product-card>
   </div>
 
   <ng-container *ngIf="total! > 0; else noItemsFound">
@@ -22,9 +21,9 @@
     </div>
   </ng-template>
 
-  <button  *ngIf="total! > 0" mat-raised-button color="primary" class="submit-button" (click)="goToReceipt()">Buy</button>
+  <!-- <button  *ngIf="total! > 0" mat-raised-button color="primary" class="submit-button" (click)="goToReceipt()">Buy</button> -->
   <button  *ngIf="total! === 0" mat-raised-button color="primary" class="submit-button" routerLink="">Add</button>
 
-  <pagination-controls class="pagination" (pageChange)="p = $event" previousLabel="Previous"
+  <pagination-controls class="pagination" (pageChange)="page = $event" previousLabel="Previous"
                                                                     nextLabel="Next"></pagination-controls>
 </div>

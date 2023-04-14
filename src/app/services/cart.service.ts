@@ -20,11 +20,11 @@ export class CartService {
   }
 
   addProductToCart(cartId: string| undefined, productId: string| undefined): Observable<any>{
-    return this.http.post(`${this.api}/${cartId}/addProduct/${productId}`, null)
+    return this.http.post(`${this.api}/db9784c6-4/addProduct/${productId}`, null)
   }
 
   removeItemFromList(cartId: string| undefined, productId: string| undefined): Observable<any>{
-    return this.http.post(`${this.api}/${cartId}/removeProduct/${productId}`, null)
+    return this.http.post(`${this.api}/db9784c6-4/removeProduct/${productId}`, null)
   }
 
   deleteCart(cartId: string): Observable<any>{
