@@ -1,16 +1,11 @@
 <div class="search-product-page">
-    <mat-select [(value)]="selected" style="width: 30%;">
-        <mat-option value="n_ident">ID Number</mat-option>
-        <mat-option value="name">Name</mat-option>
-    </mat-select>
-
     <mat-form-field  style="width: 40%;">
         <input matInput  placeholder="Search" [(ngModel)]="searchingBy"/>
     </mat-form-field>
 
 
     <div class="results-container">
-        <app-product-card *ngFor="let i_product of s_founded | paginate : { itemsPerPage: 3,
+        <app-product-card *ngFor="let i_product of s_founded | paginate : { itemsPerPage: 8,
             currentPage: page}" [product]="i_product"></app-product-card>
     </div>
 
